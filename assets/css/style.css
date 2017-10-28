@@ -20,7 +20,7 @@ h1, h4 {
 h1 {
 	font-size: 200%;
 	font-weight: bold;
-	padding: 30px 30px;
+	padding: 30px;
 	float: left;
 }
 
@@ -208,3 +208,84 @@ footer p {
 	text-align: center;
 	padding-top: 35px; /*margin-top does not work here, why?*/
 }
+
+/*=======================================================================
+========================= MEDIA QUERIES =================================
+=========================================================================*/
+
+/* =============== If the screen width <= 980px ================= */
+
+@media screen and (max-width: 980px) {
+	.header { width: 770px; } 
+
+	.content { width: 770px; margin: auto; }
+
+    #profile-image { width: 400px; height: auto; } 
+
+	section { width: 460px; }
+
+	section hr { width: 400px; } 
+
+	.project, .project img { width: 400px; height: 291px; }
+
+	.project div { top: 215px; }
+
+	.project:nth-child(even) { margin-left: 30px; }
+
+	input[type=text], input[type=email], textarea { width: 390px; }
+}
+
+/* =============== If the screen width <= 768px ================= */
+
+@media screen and (max-width: 768px) {
+	.header { width: 670px; }
+
+	.content { width: 670px; }
+
+   	section { width: 670px; margin: 40px 40px 0 0;}
+
+    section hr, aside hr { width: 610px; }
+
+    #profile-image { float: left; width: 275px; height: auto; }
+
+    aside { width: 670px; margin: 40px 0; }
+
+    .project, .project img { width: 285px; height: 207px; }
+
+	.project div { top: 125px; }
+
+	.project:nth-child(odd) { margin-right: 10px; }
+
+	input[type=text], input[type=email], textarea { width: 600px; }
+}
+
+/* =============== If the screen width <= 640px ================= */
+
+@media screen and (max-width: 640px) {
+	header { width: 623px; height: 120px; position: stat; }
+
+	h1 { padding: 20px; float: none; text-align: center; }
+
+	ul { float: none; }
+
+	li { margin: 6px 0 0 85px; }
+
+	.content { width: 460px; }
+
+	section, aside { width: 460px; }
+
+	section hr, aside hr { width: 400px; }
+
+	#profile-image { width: 400px; }
+
+	aside { margin-top: 40px; margin-bottom: 40px; }
+
+	.project, .project img { width: 400px; height: 291px; }
+
+	.project div { top: 215px; }
+
+	.project:nth-child(even) { margin-left: 30px; }
+
+	input[type=text], input[type=email], textarea { width: 390px; }
+}
+
