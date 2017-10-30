@@ -2,7 +2,7 @@ body {
 	background-image: url("../images/concrete_seamless.png");
 	color: #777777;
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-	line-height: 35px;	
+	line-height: 210%;	
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
@@ -59,8 +59,8 @@ aside {
 }
 
 header {
-	border-bottom: 2px solid #cccccc; /*3px is acting funky*/
-	height: 94px;
+	border-bottom: 3px solid #cccccc;
+	position: static;
 }
 
 .header {
@@ -75,8 +75,8 @@ ul {
 
 li {
 	display: inline-block;
-	margin-left: -6px;
-	margin-top: 25px;
+	margin-left: -5px;
+	margin-top: 30px;
 }
 
 li a { 
@@ -238,54 +238,66 @@ footer p {
 /* =============== If the screen width <= 768px ================= */
 
 @media screen and (max-width: 768px) {
-	.header { width: 670px; }
+	.header { width: 100%; }
 
-	.content { width: 670px; }
+	ul { margin-right: 30px; }
 
-   	section { width: 670px; margin: 40px 40px 0 0;}
+	.content { width: 90%; }
 
-    section hr, aside hr { width: 610px; }
+   	section { width: 100%; margin: 40px 40px 0 0;}
+
+    section hr, aside hr { width: calc(100% - 60px); }
 
     #profile-image { float: left; width: 275px; height: auto; }
 
-    aside { width: 670px; margin: 40px 0; }
+    aside { width: 100%; margin: 40px 0; }
 
-    .project, .project img { width: 285px; height: 207px; }
+    .project { width: calc((100% - 100px) / 2); height: auto; margin-bottom: 5%; } 
 
-	.project div { top: 125px; }
+    .project img { width: 100%; height: auto; }
+
+	.project div { top: 60%; }
 
 	.project:nth-child(odd) { margin-right: 10px; }
 
-	input[type=text], input[type=email], textarea { width: 600px; }
+	input[type=text], input[type=email], textarea { width: calc(100% - 10px); }
 }
 
 /* =============== If the screen width <= 640px ================= */
 
 @media screen and (max-width: 640px) {
-	header { width: 623px; height: 120px; position: stat; }
+	p { font-size: 16px; line-height: 1.4em; }
+
+	header { width: 100%; height: 125px; }
 
 	h1 { padding: 20px; float: none; text-align: center; }
 
-	ul { float: none; }
+	ul { float: none; width: 100%; margin: auto; }
 
-	li { margin: 6px 0 0 85px; }
+	li { margin-right: -5px; margin-top: 9px; margin-left: 0; text-align: center; width: 33.33%; }
 
-	.content { width: 460px; }
+	li:last-of-type { margin-right: 0; }
 
-	section, aside { width: 460px; }
+	li a { margin: 0; }
 
-	section hr, aside hr { width: 400px; }
+	.content { width: 90%; }
 
-	#profile-image { width: 400px; }
+	section, aside { width: 100%; margin: 10% 0; }
 
-	aside { margin-top: 40px; margin-bottom: 40px; }
+	section hr, aside hr { width: calc(100% - 60px); }
 
-	.project, .project img { width: 400px; height: 291px; }
+	#profile-image { width: calc(100% - 60px); margin: 0 0 15px 30px; }
 
-	.project div { top: 215px; }
+	aside { margin-top: 0; }
 
-	.project:nth-child(even) { margin-left: 30px; }
+	.project { width: calc(100% - 60px); height: auto; margin-bottom: 10%; } 
 
-	input[type=text], input[type=email], textarea { width: 390px; }
+	.project img { width: 100%; height: auto; }
+
+	.project div { top: 60%; }
+
+	.project:nth-child(odd) { margin-right: 30px; }
+
+	input[type=text], input[type=email], textarea { width: calc(100% - 10px); }
 }
 
